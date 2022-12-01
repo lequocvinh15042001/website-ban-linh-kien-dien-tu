@@ -1,0 +1,93 @@
+@import "../../App.scss";
+.btn{
+    display: block;
+    width: 148px;
+    margin: 0 auto;
+    margin-top: 15px;
+    text-align: center;
+    font-size: small;
+    
+}
+// transition: $transition;
+
+    // transition: transform 250ms;
+    //     :hover{
+    //       transform: translateY(-20px);
+    //     }
+.product-items{
+    row-gap: 20px;
+
+    transition: $transition;
+    transition: transform 500ms;
+        :hover{
+          transform: translateY(-10px);
+        }
+    .product-item{
+        cursor: pointer;
+        box-shadow: rgba(99, 99, 99, 0.05) 0px 2px 8px 0px;
+        padding: 18px;
+        border-radius: 4px;
+
+        &-body{
+            padding: 12px 0;
+        }
+
+        &-img{
+
+            position: relative;
+            
+            
+            .product-item-cat{
+                position: absolute;
+                top: -25px;
+                right: -30px;
+                font-size: small;
+                width: 90px;
+                height: 30px;
+                border-radius: 5px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                font-weight: 600;
+                // &-text{
+                //     font-size: medium;
+                // }
+                
+                &-cate{
+                    font-weight: 600;
+                    background-color: darkgoldenrod;
+                }
+                
+            }
+            
+        }
+        
+        &-title{
+            padding: 8px 0;
+            opacity: 0.8;
+            display: block;
+            
+        }
+        &:hover{
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+    }
+
+    @media screen and (min-width: 576px){
+        grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+    }
+
+    @media screen and (min-width: 768px){
+        grid-template-columns: repeat(3, 1fr);
+            column-gap: 20px;
+    }
+
+    @media screen and (min-width: 992px){
+        grid-template-columns: repeat(4, 1fr);
+            column-gap: 20px;
+    }
+
+    @media screen and (min-width: 1200px){
+        grid-template-columns: repeat(5, 1fr);
+            column-gap: 20px;
+    }
+}
